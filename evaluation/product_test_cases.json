@@ -1,0 +1,124 @@
+{
+  "cases": [
+    {
+      "description": "Jardine Enterprises Ltd., of Taipei, Taiwan Alexander Designs Ltd. brand drop-side cribs",
+      "expected_match": true,
+      "expected_doc_id": "474"
+    },
+    {
+      "description": "Ambiano Electric Pressure Cookers",
+      "expected_match": true,
+      "expected_doc_id": "10422"
+    },
+    {
+      "description": "Bassett Bassett Candlelite cribs",
+      "expected_match": true,
+      "expected_doc_id": "3993"
+    },
+    {
+      "description": "Tuo convertible high chairs",
+      "expected_match": true,
+      "expected_doc_id": "8465"
+    },
+    {
+      "description": "L.A. Baby, of Vernon, Calif. Folding Little Wood Cribs",
+      "expected_match": true,
+      "expected_doc_id": "2236"
+    },
+    {
+      "description": "Dorel Juvenile Group USA, of Columbus, Ind. COSCO\u00ae \"Rock 'N Roller\" Baby Stroller",
+      "expected_match": true,
+      "expected_doc_id": "2643"
+    },
+    {
+      "description": "HEAO 4-in-1 High Chairs",
+      "expected_match": true,
+      "expected_doc_id": "9805"
+    },
+    {
+      "description": "Dream On Me, of Piscataway, N.J. Crib and toddler bed mattresses",
+      "expected_match": true,
+      "expected_doc_id": "8203"
+    },
+    {
+      "description": "B&B B&B mesh-sided cribs",
+      "expected_match": true,
+      "expected_doc_id": "6113"
+    },
+    {
+      "description": "Ultrex-brand Pressure Cookers",
+      "expected_match": true,
+      "expected_doc_id": "3782"
+    },
+    {
+      "description": "Lucky Star Enterprises Crib Pals Play Shapes sets",
+      "expected_match": true,
+      "expected_doc_id": "4879"
+    },
+    {
+      "description": "Die Hard",
+      "expected_match": true,
+      "expected_doc_id": "5948"
+    },
+    {
+      "description": "a plain wooden stepstool I bought at a hardware store",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a basic ceramic coffee mug set from a home goods store",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a manual can opener, no brand name I recognize",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a plastic laundry basket from a discount store",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a set of stainless steel mixing bowls",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a simple corkboard for pinning notes",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a canvas tote bag from a farmers market",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a basic desk lamp with no smart features",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a wooden cutting board",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a pack of plain cotton dish towels",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a small houseplant pot with drainage holes",
+      "expected_match": false,
+      "expected_doc_id": null
+    },
+    {
+      "description": "a non-electric hand whisk",
+      "expected_match": false,
+      "expected_doc_id": null
+    }
+  ]
+}

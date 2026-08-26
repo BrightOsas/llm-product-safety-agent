@@ -1,0 +1,120 @@
+{
+  "prompt_a": "INSTRUCTIONS (default, conversational)",
+  "prompt_b": "INSTRUCTIONS_V2_STRUCTURED (structured verdict format)",
+  "win_counts": {
+    "A": 4,
+    "B": 2,
+    "tie": 0
+  },
+  "overall_winner": "A",
+  "judgments": [
+    {
+      "question": "I have a Fisher-Price rock-n-play from around 2018, is it safe?",
+      "answer_a": "The CONTEXT does not contain any information about a recall related to the Fisher-Price rock-n-play. Therefore, I cannot determine its safety based on the provided details. It may be advisable to refer to official safety announcements or consult the manufacturer directly for specific safety information regarding your product.",
+      "answer_b": "1. Verdict: No matching recall found  \n2. Details: N/A  \n3. What to do next: Please double-check the exact brand/model on cpsc.gov for the most accurate information regarding safety.",
+      "verdict": {
+        "answer_a": {
+          "groundedness": 5,
+          "clarity": 4,
+          "actionability": 3
+        },
+        "answer_b": {
+          "groundedness": 5,
+          "clarity": 3,
+          "actionability": 5
+        },
+        "winner": "B"
+      }
+    },
+    {
+      "question": "Have there been any recalls for space heaters?",
+      "answer_a": "Yes, there have been several recalls for space heaters. Here are the details:\n\n1. **Product**: Space Heaters by Lasko Products Inc.  \n   **Hazard**: The power cord connection can overheat and cause the cord to separate from the space heater, posing a fire, burn, and shock hazard.  \n   **Date**: March 4, 2004  \n   **Remedy**: Consumers should stop using the heaters, unplug them, and contact Lasko Products for instructions on returning the heater to receive a free replacement heater or a product of similar value.  \n\n2. **Product**: Electric Space Heaters by Shop LC  \n   **Hazard**: The electric space heaters can overheat, posing fire and burn hazards.  \n   **Date**: February 10, 2022  \n   **Remedy**: Consumers should immediately stop using the recalled electric space heaters and return the product to Shop LC. Shop LC is notifying all known purchasers directly and providing free return labels with pre-paid postage. Upon receipt of the recalled electric heaters, Shop LC will refund consumers through the original method of payment.  \n\n3. **Product**: Portable Space Heaters by PD Sixty Distributor  \n   **Hazard**: The space heater can overheat due to loose electrical connections, posing a fire hazard to consumers.  \n   **Date**: February 8, 2011  \n   **Remedy**: Consumers should immediately stop using these heaters and destroy them. A remedy is no longer available.  \n\n4. **Product**: Space Heaters by Vermont Castings, Majestic Products  \n   **Hazard**: Overheating inside the space heaters can cause the exterior to become extremely hot, posing fire and burn hazards to consumers.  \n   **Date**: May 9, 2001  \n   **Remedy**: Consumers should stop using the heaters immediately and discard or destroy them. The company is no longer in business, and a remedy is no longer available.  \n\n5. **Product**: Electric Space Heaters by Vornado Air  \n   **Hazard**: The heater can overheat and cause the units to melt, catch fire, and ignite nearby items, posing a fire and burn hazard to consumers.  \n   **Date**: August 14, 2014  \n   **Remedy**: Customers should immediately turn off and unplug the electric space heater and contact Vornado for instructions on how to receive a free replacement unit, including free shipping.  \n\nIf you have a specific space heater in mind, please let me know for more tailored information.",
+      "answer_b": "1. Verdict: Recall found  \n2. Details: \n   - Product: Space heaters  \n   - Manufacturer: Lasko Products Inc.  \n   - Date: 2004-03-04  \n   - Hazard: The power cord connection can overheat and cause the cord to separate from the space heater, posing a fire, burn, and shock hazard.  \n   - Remedy: Consumers should stop using the heaters, unplug them, and contact Lasko Products for instructions on returning the heater to receive a free replacement heater or a product of similar value.  \n3. What to do next: If you own a Lasko space heater, stop using it and contact Lasko Products for a replacement.",
+      "verdict": {
+        "answer_a": {
+          "groundedness": 5,
+          "clarity": 5,
+          "actionability": 5
+        },
+        "answer_b": {
+          "groundedness": 5,
+          "clarity": 4,
+          "actionability": 4
+        },
+        "winner": "A"
+      }
+    },
+    {
+      "question": "Is my Instant Pot pressure cooker safe to still use?",
+      "answer_a": "The context does mention a recall related to Instant Pot pressure cookers. The recall, dated July 15, 2015, was due to a hazard where the thermal probe in the base could conduct electricity throughout the cooker, posing a risk of electric shock. \n\nThe recommended remedy for affected consumers is to stop using the recalled product immediately and contact Instant Pot for instructions to receive a free replacement base, which includes the entire bottom of the pressure cooker.\n\nIf your Instant Pot pressure cooker is before or around that recall date and is one of the affected models, it would be wise to stop using it and seek the replacement as advised in the recall. If it is a newer model or you are unsure if it is included in the recall, you may want to check with Instant Pot directly for safety confirmation.",
+      "answer_b": "1. Verdict: Recall found\n2. Details: product: Instant Pot Pressure Cookers, manufacturer: Double Insight, date: July 15, 2015, hazard: The thermal probe in the base can conduct electricity throughout the cooker, posing a risk of electric shock, remedy: Consumers should stop using the recalled product immediately and contact Instant Pot for instructions to receive a free replacement base.\n3. What to do next: Immediately stop using your Instant Pot pressure cooker and contact Instant Pot for a free replacement.",
+      "verdict": {
+        "answer_a": {
+          "groundedness": 5,
+          "clarity": 4,
+          "actionability": 4
+        },
+        "answer_b": {
+          "groundedness": 5,
+          "clarity": 5,
+          "actionability": 5
+        },
+        "winner": "B"
+      }
+    },
+    {
+      "question": "What's the hazard associated with recalled baby swings?",
+      "answer_a": "The hazards associated with recalled baby swings include:\n\n1. **Nezmdi Infant Swings**: These swings pose a suffocation hazard and a risk of serious injury or death because they were marketed for infant sleep and have an incline angle greater than 10 degrees, violating the Safe Sleep for Babies Act. They also fail to meet mandatory warning requirements regarding button cell and coin batteries. This recall was issued on May 22, 2025. Consumers are advised to stop using the swings immediately and contact Nezmdi for a full refund.\n\n2. **Vevor Baby Swings (Sanven Technology)**: Similar to the Nezmdi swings, these were marketed for infant sleep and have an incline angle greater than 10 degrees, violating safety standards and posing a deadly suffocation risk. The recall was issued on November 6, 2025. Consumers should also stop using these swings and contact the manufacturer for a full refund.\n\n3. **MamaRoo and RockaRoo Infant Swings (4moms)**: These recalled products pose an entanglement and strangulation hazard due to dangling restraint straps when not in use. This recall was issued on August 15, 2022. Consumers are advised to stop using these swings and take precautions to keep them out of reach of crawling infants.\n\nOverall, the main hazards across these recalls are suffocation risk due to incline issues and entanglement hazards from dangling straps.",
+      "answer_b": "1. Verdict: Recall found  \n2. Details: Product: Nezmdi Infant Swings; Manufacturer: Nezmdi; Date: May 22, 2025; Hazard: Suffocation hazard due to incline angle greater than 10 degrees, risk of serious injury or death; Remedy: Stop using immediately, contact Nezmdi for a refund, send a photo of the swing cover cut in half to yingpengds@163.com.  \n3. What to do next: Stop using the Nezmdi Infant Swings and follow the instructions for refund and disposal provided.",
+      "verdict": {
+        "answer_a": {
+          "groundedness": 5,
+          "clarity": 5,
+          "actionability": 5
+        },
+        "answer_b": {
+          "groundedness": 5,
+          "clarity": 4,
+          "actionability": 4
+        },
+        "winner": "A"
+      }
+    },
+    {
+      "question": "I'm buying a used stroller secondhand, how do I check if it was recalled?",
+      "answer_a": "To check if a used stroller has been recalled, you can start by looking for specific recall information related to the model you are considering. Here are some strollers that have been recalled:\n\n1. **Bugaboo Bee Strollers**\n   - **Hazard:** The front swivel wheels can lock while the stroller is in motion, causing the stroller to tip and posing a fall hazard.\n   - **Date:** December 22, 2011\n   - **Remedy:** Stop using the recalled strollers immediately and contact Bugaboo or the retailer for free replacement swivel wheels.\n\n2. **Zooper Tango Double Strollers**\n   - **Hazard:** The stroller's frame latch can fail when hitting an object, causing the stroller to unexpectedly collapse.\n   - **Date:** August 19, 2010\n   - **Remedy:** Stop using these recalled strollers immediately and contact Zooper USA for a free repair kit.\n\n3. **Baby Jogger Strollers**\n   - **Hazard:** The restraint buckle could break or unlatch, allowing a child or infant to fall out.\n   - **Date:** August 27, 2009\n   - **Remedy:** Stop using the recalled strollers immediately and contact Baby Jogger for a free replacement restraint buckle.\n\nIf the stroller you are buying is not one of these models, or if you need more comprehensive checks, you can also visit the CPSC (U.S. Consumer Product Safety Commission) website and search for recalls by the brand or model number.",
+      "answer_b": "1. Verdict: No matching recall found  \n2. Details: N/A  \n3. What to do next: Double-check the exact brand/model on cpsc.gov for any recalls.",
+      "verdict": {
+        "answer_a": {
+          "groundedness": 5,
+          "clarity": 5,
+          "actionability": 5
+        },
+        "answer_b": {
+          "groundedness": 3,
+          "clarity": 3,
+          "actionability": 2
+        },
+        "winner": "A"
+      }
+    },
+    {
+      "question": "Are Graco car seats generally reliable, safety-wise?",
+      "answer_a": "The context does not provide specific information about the reliability or safety of Graco car seats in general. It details recalls involving car seats from Century Products and Dorel Juvenile Group, both of which highlight specific hazards related to using the seats as carriers, including the potential for the handle to break or release unexpectedly, leading to serious injuries. However, it is mentioned that Graco, which owns the Century brand, has provided remedies for the recalled products. \n\nWhile these incidents indicate that some models have faced safety issues, it does not allow for a broad conclusion about all Graco car seats' safety.",
+      "answer_b": "1. Verdict: No matching recall found  \n2. Details: N/A  \n3. What to do next: Please double-check the exact brand/model on cpsc.gov.",
+      "verdict": {
+        "answer_a": {
+          "groundedness": 5,
+          "clarity": 4,
+          "actionability": 3
+        },
+        "answer_b": {
+          "groundedness": 2,
+          "clarity": 3,
+          "actionability": 2
+        },
+        "winner": "A"
+      }
+    }
+  ]
+}

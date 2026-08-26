@@ -1,0 +1,23 @@
+{
+  "keyword_only": {
+    "num_questions": 180,
+    "hit_rate": 0.7667,
+    "mrr": 0.6561
+  },
+  "vector_only": {
+    "num_questions": 180,
+    "hit_rate": 0.7833,
+    "mrr": 0.6603
+  },
+  "hybrid": {
+    "num_questions": 180,
+    "hit_rate": 0.7944,
+    "mrr": 0.6731
+  },
+  "hybrid_plus_reranking": {
+    "num_questions": 180,
+    "hit_rate": 0.7944,
+    "mrr": 0.6842
+  },
+  "_best_config": "hybrid_plus_reranking"
+}
