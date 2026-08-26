@@ -94,6 +94,16 @@ Or: `docker compose up --build`
 **Note**: `check_my_product` works best with a **brand** included —
 "my air fryer" alone can't be matched to one specific recall among several.
 
+<img width="656" height="402" alt="image" src="https://github.com/user-attachments/assets/877e2deb-7c34-45ca-b38a-30ebb6a9b3bd" />
+
+<img width="649" height="350" alt="image" src="https://github.com/user-attachments/assets/92439f2b-8e54-4a63-b874-6fea316141f3" />
+
+
+
+
+<img width="653" height="415" alt="image" src="https://github.com/user-attachments/assets/1f61238f-b4cc-435e-a483-c1085530c159" />
+
+
 ## Tech stack
 
 CPSC API · `minsearch` (keyword) + OpenAI embeddings (vector) + RRF
