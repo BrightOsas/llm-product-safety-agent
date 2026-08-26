@@ -57,8 +57,6 @@ product-recall-checker/
 
 ├── monitoring/db.py + README.md            # SQLite logging — see monitoring/README.md
 
-├── notebooks/01-explore-and-ingest.ipynb
-
 └── evaluation/ (scripts + results) + README.md  # see evaluation/README.md
 
 
