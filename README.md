@@ -33,20 +33,23 @@ recall documents** total.
 > DataTalks.Club FAQ documents.
 
 ## Project structure
+
+\`\`\`
 product-recall-checker/
-├── README.md # you are here
+├── README.md                       # you are here
 ├── requirements.txt / .env.example / Dockerfile / docker-compose.yml
-├── data/fetch_data.py + README.md # pulls raw recall data from CPSC
-├── ingest.py # raw data -> documents -> indices
-├── vector_search.py # semantic (embedding) search index
-├── rag_helper.py # hybrid search + prompt + LLM
-├── tools.py # the 3 agent tools
-├── agent.py # function-calling agent loop
-├── app.py # Streamlit chat interface
-├── pages/1_Monitoring.py # monitoring dashboard
-├── monitoring/db.py + README.md # SQLite logging — see monitoring/README.md
+├── data/fetch_data.py + README.md  # pulls raw recall data — see data/README.md
+├── ingest.py                        # raw data -> documents -> indices
+├── vector_search.py                  # semantic (embedding) search index
+├── rag_helper.py                      # hybrid search + prompt + LLM
+├── tools.py                            # the 3 agent tools
+├── agent.py                             # function-calling agent loop
+├── app.py                                # Streamlit chat interface
+├── pages/1_Monitoring.py                  # monitoring dashboard
+├── monitoring/db.py + README.md            # SQLite logging — see monitoring/README.md
 ├── notebooks/01-explore-and-ingest.ipynb
-└── evaluation/ (scripts + results) + README.md # see evaluation/README.md
+└── evaluation/ (scripts + results) + README.md  # see evaluation/README.md
+\`\`\`
 
 
 
@@ -68,8 +71,6 @@ and why.
 ## How to run
 
 1. Copy `.env.example` to `.env`, add your `OPENAI_API_KEY`.
-   (Use `OPENAI_MODEL=gpt-4o-mini` — reasoning models like `gpt-5-nano`
-   don't support the `temperature` parameter used here.)
 2. `pip install -r requirements.txt`
 3. `python data/fetch_data.py`
 4. `python ingest.py` (sanity check)
@@ -99,3 +100,5 @@ Streamlit (monitoring) · Docker
   prompt comparison, all with real numbers.
 - **[`monitoring/README.md`](monitoring/README.md)** — what's logged
   and how the dashboard works.
+- **[`data/README.md`](data/README.md)** — how ingestion works, and why
+  it's a manual/on-demand pipeline rather than automatic.
