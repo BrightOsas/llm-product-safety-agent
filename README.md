@@ -34,7 +34,8 @@ recall documents** total.
 
 ## Project structure
 
-product-recall-checker/
+product-safety-agent
+
 ├── README.md
 
 ├── requirements.txt / .env.example / Dockerfile / docker-compose.yml
