@@ -51,7 +51,7 @@ with st.expander("Example questions"):
         "- *I have a Cosco Rock 'N Roller baby stroller from around 2005, is it safe?*\n"
         "- *Is my COSORI air fryer model CP158-AF safe to use?*\n"
         "- *I have a COSORI air fryer model CS158-AF, was it recalled?*\n"
-        "- *Is my Graco stroller model 6303MYC safe to use?*\n"
+        "- *Is my Graco stroller model 6303MYC safe to uscleare?*\n"
         "- *Have there been any recalls for space heaters?*\n"
         "- *What's the hazard associated with recalled pressure cookers?*\n"
         "- *Compare recall history between Graco and Chicco for car seats.*\n"
