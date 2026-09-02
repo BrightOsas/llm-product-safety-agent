@@ -69,6 +69,15 @@ def fetch_all_interactions() -> list[dict]:
     conn.close()
     return [dict(r) for r in rows]
 
+def count_interactions_today() -> int:
+    import datetime
+    start_of_day = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
+    conn = get_connection()
+    row = conn.execute(
+        "SELECT COUNT(*) as cnt FROM interactions WHERE timestamp >= ?", (start_of_day,)
+    ).fetchone()
+    conn.close()
+    return row["cnt"] if row else 0
 
 # ensure the table exists as soon as this module is imported
 init_db()

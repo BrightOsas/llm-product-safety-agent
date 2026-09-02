@@ -18,13 +18,16 @@ from dotenv import load_dotenv
 
 from agent import RecallAgent
 from ingest import build_index, build_vector_index, load_documents
-from monitoring.db import log_feedback, log_interaction
+from monitoring.db import log_feedback, log_interaction, count_interactions_today
 from rag_helper import RAGBase
 from tools import RecallTools
 
 load_dotenv()
 
 st.set_page_config(page_title="Is My Stuff Safe?", page_icon="🏠")
+
+SESSION_QUESTION_LIMIT = 15
+DAILY_QUESTION_LIMIT = 200
 
 
 @st.cache_resource(show_spinner="Loading recall knowledge base...")
@@ -48,6 +51,7 @@ with st.expander("Example questions"):
         "- *I have a Cosco Rock 'N Roller baby stroller from around 2005, is it safe?*\n"
         "- *Is my COSORI air fryer model CP158-AF safe to use?*\n"
         "- *I have a COSORI air fryer model CS158-AF, was it recalled?*\n"
+        "- *Is my Graco stroller model 6303MYC safe to use?*\n"
         "- *Have there been any recalls for space heaters?*\n"
         "- *What's the hazard associated with recalled pressure cookers?*\n"
         "- *Compare recall history between Graco and Chicco for car seats.*\n"
@@ -60,7 +64,12 @@ with st.expander("Example questions"):
 agent = load_agent()
 
 if "messages" not in st.session_state:
-    st.session_state.messages = []  # each item: {role, content, interaction_id?, feedback_given?}
+    st.session_state.messages = []
+if "question_count" not in st.session_state:
+    st.session_state.question_count = 0
+
+remaining = SESSION_QUESTION_LIMIT - st.session_state.question_count
+st.caption(f"Demo limit: {remaining} of {SESSION_QUESTION_LIMIT} questions remaining this session · {DAILY_QUESTION_LIMIT} total per day.")
 
 for i, msg in enumerate(st.session_state.messages):
     with st.chat_message(msg["role"]):
@@ -82,32 +91,43 @@ for i, msg in enumerate(st.session_state.messages):
                 st.caption("Thanks for the feedback!" if msg["feedback_given"] == 1 else "Thanks — noted.")
 
 if question := st.chat_input("Ask about a product, category, or brand..."):
-    st.session_state.messages.append({"role": "user", "content": question})
-    with st.chat_message("user"):
-        st.markdown(question)
-
-    with st.chat_message("assistant"):
-        with st.spinner("Checking recall records..."):
-            start = time.time()
-            result = agent.ask(question)
-            elapsed = time.time() - start
-
-        st.markdown(result["answer"])
-        if result["tool_calls"]:
-            with st.expander("Tools used"):
-                for tc in result["tool_calls"]:
-                    st.code(f"{tc['name']}({tc['arguments']})", language="python")
-
-        interaction_id = log_interaction(
-            question=question,
-            answer=result["answer"],
-            tool_calls=result["tool_calls"],
-            response_time_seconds=elapsed,
+    if st.session_state.question_count >= SESSION_QUESTION_LIMIT:
+        st.warning(
+            f"You've reached the {SESSION_QUESTION_LIMIT}-question limit for this session. "
+            "Refresh the page to start a new session."
         )
+    elif count_interactions_today() >= DAILY_QUESTION_LIMIT:
+        st.warning(
+            "This demo has reached its daily question limit. Please try again tomorrow."
+        )
+    else:
+        st.session_state.question_count += 1
+        st.session_state.messages.append({"role": "user", "content": question})
+        with st.chat_message("user"):
+            st.markdown(question)
 
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": result["answer"],
-        "interaction_id": interaction_id,
-    })
-    st.rerun()
+        with st.chat_message("assistant"):
+            with st.spinner("Checking recall records..."):
+                start = time.time()
+                result = agent.ask(question)
+                elapsed = time.time() - start
+
+            st.markdown(result["answer"])
+            if result["tool_calls"]:
+                with st.expander("Tools used"):
+                    for tc in result["tool_calls"]:
+                        st.code(f"{tc['name']}({tc['arguments']})", language="python")
+
+            interaction_id = log_interaction(
+                question=question,
+                answer=result["answer"],
+                tool_calls=result["tool_calls"],
+                response_time_seconds=elapsed,
+            )
+
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": result["answer"],
+            "interaction_id": interaction_id,
+        })
+        st.rerun()
