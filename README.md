@@ -34,31 +34,8 @@ recall documents** total.
 
 ## Project structure
 
-product-safety-agent
+<img width="520" height="780" alt="recall_checker_architecture" src="https://github.com/user-attachments/assets/e8078a29-20a6-4834-98f6-0616b60fabce" />
 
-├── README.md
-
-├── requirements.txt / .env.example / Dockerfile / docker-compose.yml
-
-├── data/fetch_data.py + README.md  # pulls raw recall data — see data/README.
-
-├── ingest.py                        # raw data -> documents -> indices
-
-├── vector_search.py                  # semantic (embedding) search index
-
-├── rag_helper.py                      # hybrid search + prompt + LLM
-
-├── tools.py                            # the 3 agent tools
-
-├── agent.py                             # function-calling agent loop
-
-├── app.py                                # Streamlit chat interface
-
-├── pages/1_Monitoring.py                  # monitoring dashboard
-
-├── monitoring/db.py + README.md            # SQLite logging — see monitoring/README.md
-
-└── evaluation/ (scripts + results) + README.md  # see evaluation/README.md
 
 
 ## Agent tools
