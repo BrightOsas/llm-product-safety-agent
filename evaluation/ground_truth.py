@@ -17,6 +17,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
+
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from ingest import load_documents  # noqa: E402
 

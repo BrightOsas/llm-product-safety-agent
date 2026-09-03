@@ -16,6 +16,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
+
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from ingest import build_index, build_vector_index, load_documents  # noqa: E402
 from rag_helper import INSTRUCTIONS, INSTRUCTIONS_V2_STRUCTURED, RAGBase  # noqa: E402

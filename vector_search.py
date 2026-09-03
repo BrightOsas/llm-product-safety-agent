@@ -23,6 +23,7 @@ import os
 import numpy as np
 from openai import OpenAI
 
+
 EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
 
 

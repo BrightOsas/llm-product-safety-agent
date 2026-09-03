@@ -22,6 +22,7 @@ import os
 
 from openai import OpenAI
 
+
 INSTRUCTIONS = """
 You are a helpful, careful household product safety assistant.
 Answer the QUESTION using only the facts in the CONTEXT below.
