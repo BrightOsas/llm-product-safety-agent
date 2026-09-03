@@ -2,6 +2,8 @@
 
 **LLM Zoomcamp Capstone Project**
 
+**Live demo**: [Streamlit App](https://llm-appuct-safety-agent-6h8zxlpdke5yxc287qi4dv.streamlit.app/)
+
 ## Problem description
 
 Most people have no idea whether the products sitting in their home right
