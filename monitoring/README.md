@@ -5,6 +5,8 @@ question, answer, tool calls used, response time, and timestamp. Each
 answer has 👍/👎 feedback buttons in the app, logged against that
 interaction.
 
+[Streamlit App Monitoring](https://llm-appuct-safety-agent-6h8zxlpdke5yxc287qi4dv.streamlit.app/Monitoring)
+
 ## Dashboard
 
 The **"Monitoring"** page (`pages/1_Monitoring.py`, in the Streamlit
